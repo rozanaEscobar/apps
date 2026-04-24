@@ -7,15 +7,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Nunito',sans-serif;background:#0a0a14;color:#fff;min-height:100vh;padding:1.2rem 1rem 2.5rem}
+body{
+  font-family:'Nunito',sans-serif;
+  background-image:url('fundo-tecnologico.jpg');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  min-height:100vh;
+  padding:1.2rem 1rem 2.5rem;
+  color:#1a1a2e;
+}
 .page{max-width:700px;margin:0 auto}
 
-.hero{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;padding:1rem 1.2rem;background:#111126;border:1px solid #1e1e40;border-radius:16px;flex-wrap:wrap}
-.avatar{width:62px;height:62px;border-radius:50%;object-fit:cover;border:2.5px solid #7c3aed;flex-shrink:0;display:block}
-.avatar-fallback{width:62px;height:62px;border-radius:50%;background:#7c3aed;display:none;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;color:#fff;flex-shrink:0}
+/* HERO */
+.hero{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;padding:1rem 1.2rem;background:rgba(255,255,255,0.82);backdrop-filter:blur(8px);border:1px solid rgba(0,180,216,0.3);border-radius:16px;flex-wrap:wrap}
+.avatar{width:62px;height:62px;border-radius:50%;object-fit:cover;border:2.5px solid #0077b6;flex-shrink:0;display:block}
+.avatar-fallback{width:62px;height:62px;border-radius:50%;background:#0077b6;display:none;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;color:#fff;flex-shrink:0}
 .hero-text{flex:1;min-width:120px}
-.hero-text h1{font-size:1.05rem;font-weight:800;color:#fff}
-.hero-text p{font-size:0.72rem;color:#8888aa;margin-top:2px}
+.hero-text h1{font-size:1.05rem;font-weight:800;color:#03045e}
+.hero-text p{font-size:0.72rem;color:#0077b6;margin-top:2px}
 .hero-contacts{display:flex;flex-direction:column;gap:5px;align-items:flex-end}
 
 .cbtn{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;font-family:'Nunito',sans-serif;font-size:0.7rem;font-weight:700;text-decoration:none;color:#fff;transition:opacity .15s}
@@ -26,42 +36,45 @@ body{font-family:'Nunito',sans-serif;background:#0a0a14;color:#fff;min-height:10
 .cbtn-wa2{background:#128c47}
 .cbtn svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
 
+/* SECTION LABEL */
+.section-label{font-size:0.63rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#03045e;margin-bottom:0.6rem;display:flex;align-items:center;gap:6px}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(0,119,182,0.3)}
+
 /* CANAIS */
 .canais-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem}
-.canal-card{display:block;text-decoration:none;background:#16103a;border:1px solid #2e1e6e;border-radius:14px;padding:1rem 1.1rem;transition:border-color .15s}
-.canal-card:hover{border-color:#7c3aed}
+.canal-card{display:block;text-decoration:none;background:rgba(255,255,255,0.82);backdrop-filter:blur(8px);border:1px solid rgba(0,180,216,0.35);border-radius:14px;padding:1rem 1.1rem;transition:border-color .15s,background .15s}
+.canal-card:hover{border-color:#0077b6;background:rgba(255,255,255,0.95)}
 .canal-emoji{font-size:1.4rem;margin-bottom:0.4rem;display:block}
-.canal-name{font-size:0.88rem;font-weight:800;color:#e0e0ff;margin-bottom:0.25rem}
-.canal-desc{font-size:0.68rem;color:#9988cc;line-height:1.4;margin-bottom:0.5rem}
+.canal-name{font-size:0.88rem;font-weight:800;color:#03045e;margin-bottom:0.25rem}
+.canal-desc{font-size:0.68rem;color:#0077b6;line-height:1.4;margin-bottom:0.5rem}
 .canal-price{font-size:0.8rem;font-weight:800;color:#f97316}
-.canal-arrow{font-size:0.7rem;color:#7c3aed;margin-top:0.3rem;display:block}
-
-.section-label{font-size:0.63rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#a78bfa;margin-bottom:0.6rem;display:flex;align-items:center;gap:6px}
-.section-label::after{content:'';flex:1;height:1px;background:#1e1e40}
+.canal-arrow{font-size:0.7rem;color:#0077b6;margin-top:0.3rem;display:block}
 
 /* GRID APPS */
 .main-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem}
-.panel{background:#111126;border:1px solid #1e1e40;border-radius:14px;padding:0.9rem 1rem}
-.panel-title{font-size:0.63rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#a78bfa;margin-bottom:0.7rem;display:flex;align-items:center;gap:6px}
+.panel{background:rgba(255,255,255,0.82);backdrop-filter:blur(8px);border:1px solid rgba(0,180,216,0.3);border-radius:14px;padding:0.9rem 1rem}
+.panel-title{font-size:0.63rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#0077b6;margin-bottom:0.7rem;display:flex;align-items:center;gap:6px}
 .panel-title span{font-size:.95rem}
-.panel-title::after{content:'';flex:1;height:1px;background:#1e1e40}
+.panel-title::after{content:'';flex:1;height:1px;background:rgba(0,119,182,0.2)}
 
 .link-overlay{display:block;text-decoration:none;border-radius:8px;padding:0 4px;margin:0 -4px;transition:background .15s}
-.link-overlay:hover{background:#1a1a35}
-.item{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #16162e}
+.link-overlay:hover{background:rgba(0,119,182,0.07)}
+.item{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(0,119,182,0.12)}
 .link-overlay:last-child .item{border-bottom:none}
 .item-left{min-width:0}
-.item-name{font-size:0.8rem;font-weight:700;color:#e0e0ff;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
-.item-sub{font-size:0.63rem;color:#6666aa;margin-top:1px}
+.item-name{font-size:0.8rem;font-weight:700;color:#03045e;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.item-sub{font-size:0.63rem;color:#0077b6;margin-top:1px}
 .item-price{font-size:0.8rem;font-weight:800;color:#f97316;white-space:nowrap;margin-left:8px;flex-shrink:0}
-.tag{display:inline-block;padding:1px 6px;border-radius:20px;font-size:0.58rem;font-weight:700;background:#7c3aed22;color:#a78bfa}
+.tag{display:inline-block;padding:1px 6px;border-radius:20px;font-size:0.58rem;font-weight:700;background:rgba(0,119,182,0.12);color:#0077b6}
 
-.bonus-panel{background:#111126;border:1px solid #1e1e40;border-radius:14px;padding:0.9rem 1rem;margin-bottom:0.8rem}
+/* BÔNUS */
+.bonus-panel{background:rgba(255,255,255,0.82);backdrop-filter:blur(8px);border:1px solid rgba(0,180,216,0.3);border-radius:14px;padding:0.9rem 1rem;margin-bottom:0.8rem}
 .bonus-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:0.6rem}
-.bitem{background:#0d0d20;border:1px solid #1e1e40;border-radius:8px;padding:7px 9px;font-size:0.7rem;color:#b0b0d0;display:flex;align-items:flex-start;gap:5px;line-height:1.35}
-.bcheck{color:#a78bfa;font-weight:800;flex-shrink:0}
+.bitem{background:rgba(0,119,182,0.07);border:1px solid rgba(0,119,182,0.15);border-radius:8px;padding:7px 9px;font-size:0.7rem;color:#03045e;display:flex;align-items:flex-start;gap:5px;line-height:1.35}
+.bcheck{color:#0077b6;font-weight:800;flex-shrink:0}
 
-.notice{background:#111126;border:1px dashed #2a2a50;border-radius:14px;padding:0.85rem 1rem;font-size:0.73rem;color:#8888aa;text-align:center;line-height:1.55}
+/* AVISO */
+.notice{background:rgba(255,255,255,0.82);backdrop-filter:blur(8px);border:1px dashed rgba(0,119,182,0.4);border-radius:14px;padding:0.85rem 1rem;font-size:0.73rem;color:#0077b6;text-align:center;line-height:1.55}
 .notice strong{color:#f97316;font-weight:800}
 
 @media(max-width:500px){
@@ -107,7 +120,7 @@ body{font-family:'Nunito',sans-serif;background:#0a0a14;color:#fff;min-height:10
 
   <!-- MEUS CANAIS -->
   <div class="section-label">📹 Meus canais</div>
-  <div class="canais-grid" style="margin-bottom:0.8rem">
+  <div class="canais-grid">
     <a class="canal-card" href="https://pay.cakto.com.br/oa87vy6_741383" target="_blank">
       <span class="canal-emoji">📹</span>
       <div class="canal-name">Canal de Vídeos em IA</div>
@@ -125,7 +138,7 @@ body{font-family:'Nunito',sans-serif;background:#0a0a14;color:#fff;min-height:10
   </div>
 
   <!-- APPS -->
-  <div class="section-label" style="margin-bottom:0.6rem">📌 Aplicativos anuais</div>
+  <div class="section-label" style="margin-top:0.8rem;margin-bottom:0.6rem">📌 Aplicativos anuais</div>
   <div class="main-grid">
     <div class="panel">
       <div class="panel-title"><span>🤖</span> Inteligência Artificial</div>
