@@ -1,220 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rozana Escobar · Apps</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0d0d0d;
-    font-family: 'DM Sans', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 40px 16px 60px;
-  }
-  .page {
-    width: 100%;
-    max-width: 420px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
-  .profile-ring {
-    width: 104px;
-    height: 104px;
-    border-radius: 50%;
-    padding: 3px;
-    background: linear-gradient(135deg, #b4841a, #f0d060, #b4841a);
-  }
-  .profile-img {
-    width: 98px;
-    height: 98px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    border: 3px solid #0d0d0d;
-  }
-  .name {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: #f5f0e8;
-    text-align: center;
-    letter-spacing: 0.5px;
-  }
-  .tagline {
-    font-size: 13px;
-    color: #888;
-    text-align: center;
-    margin-top: -8px;
-    letter-spacing: 0.5px;
-  }
-  .section-label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #b4841a;
-    align-self: flex-start;
-    padding-left: 4px;
-    margin-top: 6px;
-    margin-bottom: -4px;
-  }
-  .btn {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 20px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: transform 0.15s, opacity 0.15s;
-    border: none;
-    position: relative;
-  }
-  .btn:hover { transform: scale(1.02); opacity: 0.92; }
-  .btn:active { transform: scale(0.98); }
-  .btn-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-  .btn-text { flex: 1; }
-  .btn-title { display: block; font-size: 14px; font-weight: 500; }
-  .btn-sub { display: block; font-size: 11px; opacity: 0.75; margin-top: 1px; }
-  .btn-arrow { font-size: 16px; opacity: 0.5; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:#0a0a14;color:#fff;min-height:100vh;padding:1.2rem 1rem 2.5rem}
+.page{max-width:700px;margin:0 auto}
 
-  .btn-canal { background: #1a1035; }
-  .btn-canal .btn-title { color: #c4b5f8; }
-  .btn-canal .btn-sub { color: #9d8fee; }
-  .btn-canal .btn-icon { background: #2d1f5e; }
-  .btn-canal .btn-arrow { color: #c4b5f8; }
+.hero{display:flex;align-items:center;gap:1rem;margin-bottom:1rem;padding:1rem 1.2rem;background:#111126;border:1px solid #1e1e40;border-radius:16px;flex-wrap:wrap}
+.avatar{width:62px;height:62px;border-radius:50%;object-fit:cover;border:2.5px solid #7c3aed;flex-shrink:0;display:block}
+.avatar-fallback{width:62px;height:62px;border-radius:50%;background:#7c3aed;display:none;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;color:#fff;flex-shrink:0}
+.hero-text{flex:1;min-width:120px}
+.hero-text h1{font-size:1.05rem;font-weight:800;color:#fff}
+.hero-text p{font-size:0.72rem;color:#8888aa;margin-top:2px}
+.hero-contacts{display:flex;flex-direction:column;gap:5px;align-items:flex-end}
 
-  .btn-curso { background: #1c1608; border: 1px solid #3a2e10; }
-  .btn-curso .btn-title { color: #f0d060; }
-  .btn-curso .btn-sub { color: #c8a83a; }
-  .btn-curso .btn-icon { background: #2e2310; }
-  .btn-curso .btn-arrow { color: #f0d060; }
+.cbtn{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;font-family:'Nunito',sans-serif;font-size:0.7rem;font-weight:700;text-decoration:none;color:#fff;transition:opacity .15s}
+.cbtn:active{opacity:.8}
+.cbtn-ig{background:#f97316}
+.cbtn-tg{background:#2ca5e0}
+.cbtn-wa{background:#25d366}
+.cbtn-wa2{background:#128c47}
+.cbtn svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
 
-  .btn-chatgpt { background: #0b1a12; }
-  .btn-chatgpt .btn-title { color: #86efac; }
-  .btn-chatgpt .btn-sub { color: #5ec27a; }
-  .btn-chatgpt .btn-icon { background: #122b1c; }
-  .btn-chatgpt .btn-arrow { color: #86efac; }
+/* CANAIS */
+.canais-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem}
+.canal-card{display:block;text-decoration:none;background:#16103a;border:1px solid #2e1e6e;border-radius:14px;padding:1rem 1.1rem;transition:border-color .15s}
+.canal-card:hover{border-color:#7c3aed}
+.canal-emoji{font-size:1.4rem;margin-bottom:0.4rem;display:block}
+.canal-name{font-size:0.88rem;font-weight:800;color:#e0e0ff;margin-bottom:0.25rem}
+.canal-desc{font-size:0.68rem;color:#9988cc;line-height:1.4;margin-bottom:0.5rem}
+.canal-price{font-size:0.8rem;font-weight:800;color:#f97316}
+.canal-arrow{font-size:0.7rem;color:#7c3aed;margin-top:0.3rem;display:block}
 
-  .btn-capcut { background: #1c0d10; }
-  .btn-capcut .btn-title { color: #fda4af; }
-  .btn-capcut .btn-sub { color: #e07a88; }
-  .btn-capcut .btn-icon { background: #2e1218; }
-  .btn-capcut .btn-arrow { color: #fda4af; }
+.section-label{font-size:0.63rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#a78bfa;margin-bottom:0.6rem;display:flex;align-items:center;gap:6px}
+.section-label::after{content:'';flex:1;height:1px;background:#1e1e40}
 
-  .btn-canva { background: #0c1620; }
-  .btn-canva .btn-title { color: #7dd3fc; }
-  .btn-canva .btn-sub { color: #5aaed4; }
-  .btn-canva .btn-icon { background: #152436; }
-  .btn-canva .btn-arrow { color: #7dd3fc; }
+/* GRID APPS */
+.main-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:0.8rem}
+.panel{background:#111126;border:1px solid #1e1e40;border-radius:14px;padding:0.9rem 1rem}
+.panel-title{font-size:0.63rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#a78bfa;margin-bottom:0.7rem;display:flex;align-items:center;gap:6px}
+.panel-title span{font-size:.95rem}
+.panel-title::after{content:'';flex:1;height:1px;background:#1e1e40}
 
-  .btn-grok { background: #1c1008; }
-  .btn-grok .btn-title { color: #fdba74; }
-  .btn-grok .btn-sub { color: #e09050; }
-  .btn-grok .btn-icon { background: #2e1c0c; }
-  .btn-grok .btn-arrow { color: #fdba74; }
+.link-overlay{display:block;text-decoration:none;border-radius:8px;padding:0 4px;margin:0 -4px;transition:background .15s}
+.link-overlay:hover{background:#1a1a35}
+.item{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #16162e}
+.link-overlay:last-child .item{border-bottom:none}
+.item-left{min-width:0}
+.item-name{font-size:0.8rem;font-weight:700;color:#e0e0ff;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.item-sub{font-size:0.63rem;color:#6666aa;margin-top:1px}
+.item-price{font-size:0.8rem;font-weight:800;color:#f97316;white-space:nowrap;margin-left:8px;flex-shrink:0}
+.tag{display:inline-block;padding:1px 6px;border-radius:20px;font-size:0.58rem;font-weight:700;background:#7c3aed22;color:#a78bfa}
 
-  .divider {
-    width: 100%;
-    height: 1px;
-    background: #222;
-    margin: 2px 0;
-  }
-  .footer {
-    font-size: 11px;
-    color: #444;
-    margin-top: 10px;
-    text-align: center;
-  }
+.bonus-panel{background:#111126;border:1px solid #1e1e40;border-radius:14px;padding:0.9rem 1rem;margin-bottom:0.8rem}
+.bonus-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:0.6rem}
+.bitem{background:#0d0d20;border:1px solid #1e1e40;border-radius:8px;padding:7px 9px;font-size:0.7rem;color:#b0b0d0;display:flex;align-items:flex-start;gap:5px;line-height:1.35}
+.bcheck{color:#a78bfa;font-weight:800;flex-shrink:0}
+
+.notice{background:#111126;border:1px dashed #2a2a50;border-radius:14px;padding:0.85rem 1rem;font-size:0.73rem;color:#8888aa;text-align:center;line-height:1.55}
+.notice strong{color:#f97316;font-weight:800}
+
+@media(max-width:500px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .hero-contacts{align-items:flex-start;flex-direction:row;flex-wrap:wrap}
+  .canais-grid{grid-template-columns:1fr}
+  .main-grid{grid-template-columns:1fr}
+  .bonus-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="profile-ring">
-    <img class="profile-img" src="data:image/jpeg;base64,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" alt="Rozana Escobar">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img class="avatar" src="rozana.jpg" alt="Rozana Escobar"
+         onerror="this.style.display='none';document.querySelector('.avatar-fallback').style.display='flex'">
+    <div class="avatar-fallback">RE</div>
+    <div class="hero-text">
+      <h1>Rozana Escobar</h1>
+      <p>Aplicativos anuais · IA na prática · Ferramentas</p>
+    </div>
+    <div class="hero-contacts">
+      <a class="cbtn cbtn-ig" href="https://www.instagram.com/guiarapidoshopeeafiliado/reels/" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Instagram
+      </a>
+      <a class="cbtn cbtn-tg" href="https://t.me/rozanaescobar" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        Telegram
+      </a>
+      <a class="cbtn cbtn-wa" href="https://wa.me/5551997453096" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        (51) 99745-3096
+      </a>
+      <a class="cbtn cbtn-wa2" href="https://wa.me/5551991041876" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        (51) 99104-1876
+      </a>
+    </div>
   </div>
 
-  <p class="name">Rozana Escobar</p>
-  <p class="tagline">IA na prática · Vídeos · Ferramentas</p>
+  <!-- MEUS CANAIS -->
+  <div class="section-label">📹 Meus canais</div>
+  <div class="canais-grid" style="margin-bottom:0.8rem">
+    <a class="canal-card" href="https://pay.cakto.com.br/oa87vy6_741383" target="_blank">
+      <span class="canal-emoji">📹</span>
+      <div class="canal-name">Canal de Vídeos em IA</div>
+      <div class="canal-desc">5 vídeos HD por dia</div>
+      <div class="canal-price">R$ 6,90/sem · R$ 24/mês</div>
+      <span class="canal-arrow">›</span>
+    </a>
+    <a class="canal-card" href="https://pay.cakto.com.br/35odqxk_743449" target="_blank">
+      <span class="canal-emoji">🎓</span>
+      <div class="canal-name">Curso Completo + Suporte</div>
+      <div class="canal-desc">Shopee · +4.000 vídeos prontos</div>
+      <div class="canal-price">R$ 25,90/mês</div>
+      <span class="canal-arrow">›</span>
+    </a>
+  </div>
 
-  <div class="divider"></div>
-  <span class="section-label">Meus canais</span>
-
-  <a class="btn btn-canal" href="https://pay.cakto.com.br/oa87vy6_741383" target="_blank">
-    <div class="btn-icon">📹</div>
-    <div class="btn-text">
-      <span class="btn-title">Canal de Vídeos em IA</span>
-      <span class="btn-sub">5 vídeos HD por dia · R$6,90/sem ou R$24/mês</span>
+  <!-- APPS -->
+  <div class="section-label" style="margin-bottom:0.6rem">📌 Aplicativos anuais</div>
+  <div class="main-grid">
+    <div class="panel">
+      <div class="panel-title"><span>🤖</span> Inteligência Artificial</div>
+      <a class="link-overlay" href="https://pay.kirvano.com/14458aaf-4aca-4068-af9b-ad30c10dee83?aff=3d3ead42-9455-4dfb-8645-b960ef64fb3b" target="_blank">
+        <div class="item"><div class="item-left"><div class="item-name">Veo3 + Gemini</div><div class="item-sub">Pix ou cartão</div></div><div class="item-price">R$ 97/ano</div></div>
+      </a>
+      <a class="link-overlay" href="https://pay.kirvano.com/be72c86c-9095-47db-be96-af2f8f80ccee?aff=26c0668a-8104-4203-948a-0c348aa97683" target="_blank">
+        <div class="item"><div class="item-left"><div class="item-name">Gemini</div><div class="item-sub">Pix ou cartão</div></div><div class="item-price">R$ 67/ano</div></div>
+      </a>
+      <a class="link-overlay" href="https://pay.kirvano.com/542b4124-945c-416b-9d2f-9adab6923996?aff=f3d3a3b8-95eb-467d-b2fe-4a5eb6628af8" target="_blank">
+        <div class="item"><div class="item-left"><div class="item-name">ChatGPT Privado</div><div class="item-sub">No seu e-mail · Sem limites</div></div><div class="item-price">R$ 67/ano</div></div>
+      </a>
+      <a class="link-overlay" href="https://pay.kirvano.com/aa69d67a-27af-4800-ae73-9b16e79831d4?aff=1cba4321-8548-45c7-815a-1ec86f99228b" target="_blank">
+        <div class="item"><div class="item-left"><div class="item-name">Grok <span class="tag">imagens + vídeos</span></div><div class="item-sub">Acesso privado</div></div><div class="item-price">R$ 197/ano</div></div>
+      </a>
     </div>
-    <span class="btn-arrow">›</span>
-  </a>
 
-  <a class="btn btn-curso" href="https://pay.cakto.com.br/35odqxk_743449" target="_blank">
-    <div class="btn-icon">🎓</div>
-    <div class="btn-text">
-      <span class="btn-title">Curso Completo + Suporte</span>
-      <span class="btn-sub">Shopee · +4.000 vídeos prontos · R$15,90/mês</span>
+    <div class="panel">
+      <div class="panel-title"><span>🎨</span> Criação &amp; Edição</div>
+      <a class="link-overlay" href="https://pay.kirvano.com/2fa6bd39-f9dc-4ebe-9dab-007c90602e6d?aff=ba0578bf-7a4f-49e8-b9bb-099a1f22c27b" target="_blank">
+        <div class="item"><div class="item-left"><div class="item-name">Canva Pro</div><div class="item-sub">Pix ou cartão</div></div><div class="item-price">R$ 29/ano</div></div>
+      </a>
+      <a class="link-overlay" href="https://pay.kirvano.com/85283aae-88a7-4dd0-90ae-1b65d2663f33?aff=00e42f69-c99b-433d-b435-4056ad6c164b" target="_blank">
+        <div class="item"><div class="item-left"><div class="item-name">CapCut Pro</div><div class="item-sub">Pix ou cartão</div></div><div class="item-price">R$ 47/ano</div></div>
+      </a>
+      <a class="link-overlay" href="https://pay.kirvano.com/b25ebd33-615d-4692-9062-e03ffd88373d?aff=8d0019be-cf99-43f0-b3cf-5379faef5c6d" target="_blank">
+        <div class="item"><div class="item-left"><div class="item-name">Infinity Combo <span class="tag">combo</span></div><div class="item-sub">Canva + CapCut juntos</div></div><div class="item-price">R$ 80/ano</div></div>
+      </a>
     </div>
-    <span class="btn-arrow">›</span>
-  </a>
+  </div>
 
-  <div class="divider"></div>
-  <span class="section-label">Ferramentas anuais</span>
-
-  <a class="btn btn-grok" href="https://pay.kirvano.com/aa69d67a-27af-4800-ae73-9b16e79831d4?aff=1cba4321-8548-45c7-815a-1ec86f99228b" target="_blank">
-    <div class="btn-icon">🤖</div>
-    <div class="btn-text">
-      <span class="btn-title">Grok · IA de imagem e vídeo</span>
-      <span class="btn-sub">Privado · R$197 parcelado</span>
+  <!-- BÔNUS -->
+  <div class="bonus-panel">
+    <div class="panel-title"><span>🎁</span> Bônus exclusivo para membros</div>
+    <div class="bonus-grid">
+      <div class="bitem"><span class="bcheck">✔</span> Grupo privado no WhatsApp</div>
+      <div class="bitem"><span class="bcheck">✔</span> Dicas de apps, edição e vídeos com IA</div>
+      <div class="bitem"><span class="bcheck">✔</span> Site Prompts Rozana Escobar</div>
+      <div class="bitem"><span class="bcheck">✔</span> +60 prompts prontos para usar</div>
     </div>
-    <span class="btn-arrow">›</span>
-  </a>
+  </div>
 
-  <a class="btn btn-chatgpt" href="https://pay.kirvano.com/542b4124-945c-416b-9d2f-9adab6923996?aff=f3d3a3b8-95eb-467d-b2fe-4a5eb6628af8" target="_blank">
-    <div class="btn-icon">💬</div>
-    <div class="btn-text">
-      <span class="btn-title">ChatGPT privado</span>
-      <span class="btn-sub">No seu e-mail, sem limites · R$67/ano</span>
-    </div>
-    <span class="btn-arrow">›</span>
-  </a>
+  <!-- AVISO -->
+  <div class="notice">
+    📩 Após a compra, <strong>entre em contato</strong> informando o e-mail utilizado para liberar seu acesso.
+  </div>
 
-  <a class="btn btn-capcut" href="https://checkout.ticto.app/O862DA4F3?pid=AFA2C62F53" target="_blank">
-    <div class="btn-icon">🎬</div>
-    <div class="btn-text">
-      <span class="btn-title">CapCut</span>
-      <span class="btn-sub">R$47/ano</span>
-    </div>
-    <span class="btn-arrow">›</span>
-  </a>
-
-  <a class="btn btn-canva" href="https://checkout.ticto.app/OA4574BAF?pid=AF839BB843" target="_blank">
-    <div class="btn-icon">🎨</div>
-    <div class="btn-text">
-      <span class="btn-title">Canva</span>
-      <span class="btn-sub">R$29/ano</span>
-    </div>
-    <span class="btn-arrow">›</span>
-  </a>
-
-  <div class="divider"></div>
-  <p class="footer">dúvidas? t.me/rozanaescobar · (51) 99745-3096</p>
 </div>
 </body>
 </html>
