@@ -18,6 +18,8 @@ body{
   color:#1a1a2e;
 }
 .page{max-width:1280px;margin:0 auto}
+
+/* HERO */
 .hero{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding:1.2rem 1.4rem;background:rgba(255,255,255,0.88);backdrop-filter:blur(12px);border:1px solid rgba(255,100,200,0.4);border-radius:20px;flex-wrap:wrap}
 .avatar{width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid #ff4da6;flex-shrink:0}
 .hero-text{flex:1;min-width:180px}
@@ -27,6 +29,8 @@ body{
 .cbtn-ig{background:#f97316}
 .cbtn-tg{background:#2ca5e0}
 .cbtn-wa{background:#25d366}
+
+/* CARDS */
 .product-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
@@ -66,6 +70,7 @@ body{
   background:linear-gradient(45deg, #9b4dff, #ff4da6);
   transform:scale(1.05);
 }
+
 .section-label{font-size:0.75rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#4a003f;margin:1.4rem 0 0.8rem;display:flex;align-items:center;gap:8px}
 .section-label::after{content:'';flex:1;height:1px;background:rgba(255,77,166,0.4)}
 .canais-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
@@ -77,6 +82,7 @@ body{
 <body>
 <div class="page">
 
+<!-- HERO -->
 <div class="hero">
 <img class="avatar" src="rozana.jpg">
 <div class="hero-text">
@@ -85,11 +91,47 @@ body{
 </div>
 </div>
 
+<!-- APLICATIVOS -->
 <div class="section-label">📌 Aplicativos anuais</div>
 <div class="product-grid">
 
 <div class="card">
+<div class="card-title">🤖 Veo3 + Gemini</div>
+<div class="card-sub">Inteligência Artificial Completa</div>
+<div class="price">R$ 97/ano</div>
+<button class="btn">Comprar Agora</button>
+</div>
+
+<div class="card">
+<div class="card-title">🤖 Gemini</div>
+<div class="card-sub">Pix ou cartão</div>
+<div class="price">R$ 67/ano</div>
+<button class="btn">Comprar Agora</button>
+</div>
+
+<div class="card">
+<div class="card-title">🤖 ChatGPT Privado</div>
+<div class="card-sub">No seu e-mail · Sem limites</div>
+<div class="price">R$ 67/ano</div>
+<button class="btn">Comprar Agora</button>
+</div>
+
+<div class="card">
+<div class="card-title">🤖 Grok</div>
+<div class="card-sub">Acesso privado</div>
+<div class="price">R$ 197/ano</div>
+<button class="btn">Comprar Agora</button>
+</div>
+
+<div class="card">
 <div class="card-title">🎨 Canva Pro</div>
+<div class="card-sub">Pix ou cartão</div>
+<div class="price">R$ 47/ano</div>
+<button class="btn">Comprar Agora</button>
+</div>
+
+<div class="card">
+<div class="card-title">🎨 CapCut Pro</div>
 <div class="card-sub">Pix ou cartão</div>
 <div class="price">R$ 47/ano</div>
 <button class="btn">Comprar Agora</button>
