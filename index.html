@@ -8,16 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
   font-family:'Nunito',sans-serif;
@@ -27,12 +20,7 @@ body{
   color:#1a1a2e;
 }
 
-.page{
-  max-width:1280px;
-  margin:0 auto;
-}
-
-/* HERO */
+.page{max-width:1280px;margin:0 auto;}
 
 .hero{
   display:flex;
@@ -55,9 +43,7 @@ body{
   border:3px solid #ff4da6;
 }
 
-.hero-text{
-  flex:1;
-}
+.hero-text{flex:1;}
 
 .hero-text h1{
   font-size:1.6rem;
@@ -84,19 +70,9 @@ body{
   font-size:0.85rem;
 }
 
-.cbtn-ig{
-  background:#f97316;
-}
-
-.cbtn-tg{
-  background:#229ED9;
-}
-
-.cbtn-wa{
-  background:#25D366;
-}
-
-/* SECTION */
+.cbtn-ig{background:#f97316;}
+.cbtn-tg{background:#229ED9;}
+.cbtn-wa{background:#25D366;}
 
 .section-label{
   font-size:0.85rem;
@@ -106,16 +82,12 @@ body{
   color:#4a003f;
 }
 
-/* GRID */
-
 .canais-grid,
 .product-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:20px;
 }
-
-/* CARDS */
 
 .card,
 .canal-card{
@@ -166,8 +138,6 @@ body{
   font-weight:700;
   cursor:pointer;
 }
-
-/* BONUS */
 
 .bonus-panel{
   background:white;
@@ -244,6 +214,14 @@ body{
   margin:15px 0;
 }
 
+.erro{
+  background:#fff0f0;
+  border-left:4px solid #ff4d4d;
+  padding:14px;
+  border-radius:12px;
+  margin:15px 0;
+}
+
 .missao{
   background:#ffe9f5;
   padding:14px;
@@ -252,6 +230,10 @@ body{
   color:#4a003f;
 }
 
+@media(max-width:700px){
+  .bonus-grid{grid-template-columns:1fr;}
+  .curso-title{font-size:1.5rem;}
+}
 </style>
 </head>
 
@@ -259,10 +241,7 @@ body{
 
 <div class="page">
 
-<!-- HERO -->
-
 <div class="hero">
-
 <img class="avatar" src="rozana.jpg" alt="Rozana Escobar">
 
 <div class="hero-text">
@@ -271,132 +250,52 @@ body{
 </div>
 
 <div class="hero-contacts">
-
-<a class="cbtn cbtn-ig" href="https://www.instagram.com/guiarapidoshopeeafiliado/reels/" target="_blank">
-Instagram
-</a>
-
-<a class="cbtn cbtn-tg" href="https://t.me/rozanaescobar" target="_blank">
-Telegram
-</a>
-
-<a class="cbtn cbtn-wa" href="https://wa.me/5551997453096" target="_blank">
-(51) 99745-3096
-</a>
-
-<a class="cbtn cbtn-wa" href="https://wa.me/5551991041876" target="_blank">
-(51) 99104-1876
-</a>
-
+<a class="cbtn cbtn-ig" href="https://www.instagram.com/guiarapidoshopeeafiliado/reels/" target="_blank">Instagram</a>
+<a class="cbtn cbtn-tg" href="https://t.me/rozanaescobar" target="_blank">Telegram</a>
+<a class="cbtn cbtn-wa" href="https://wa.me/5551997453096" target="_blank">(51) 99745-3096</a>
+<a class="cbtn cbtn-wa" href="https://wa.me/5551991041876" target="_blank">(51) 99104-1876</a>
 </div>
-
 </div>
-
-<!-- CANAIS GRATUITOS -->
 
 <div class="section-label">🎁 Canais gratuitos</div>
 
 <div class="canais-grid">
-
 <a class="canal-card" href="https://t.me/shopeestoriesgratis" target="_blank">
-
 <span style="font-size:2.5rem;">📲</span>
-
-<div class="card-title">
-Canal Gratuito Stories
-</div>
-
-<div class="card-sub">
-Stories gratuitos para afiliados
-</div>
-
-<div class="price">
-Grátis
-</div>
-
-<button class="btn">
-Entrar no Canal
-</button>
-
+<div class="card-title">Canal Gratuito Stories</div>
+<div class="card-sub">Stories gratuitos para afiliados</div>
+<div class="price">Grátis</div>
+<button class="btn">Entrar no Canal</button>
 </a>
 
 <a class="canal-card" href="https://t.me/videosgratisshopee2" target="_blank">
-
 <span style="font-size:2.5rem;">🎬</span>
-
-<div class="card-title">
-Canal Gratuito Vídeos
-</div>
-
-<div class="card-sub">
-Vídeos gratuitos para Shopee
-</div>
-
-<div class="price">
-Grátis
-</div>
-
-<button class="btn">
-Entrar no Canal
-</button>
-
+<div class="card-title">Canal Gratuito Vídeos</div>
+<div class="card-sub">Vídeos gratuitos para Shopee</div>
+<div class="price">Grátis</div>
+<button class="btn">Entrar no Canal</button>
 </a>
-
 </div>
-
-<!-- CANAIS PAGOS -->
 
 <div class="section-label">📹 Meus canais pagos</div>
 
 <div class="canais-grid">
-
 <a class="canal-card" href="https://pay.cakto.com.br/3bacywv" target="_blank">
-
 <span style="font-size:2.5rem;">📹</span>
-
-<div class="card-title">
-Canal de Vídeos em IA
-</div>
-
-<div class="card-sub">
-5 vídeos HD por dia
-</div>
-
-<div class="price">
-R$ 24/mês
-</div>
-
-<button class="btn">
-Quero Assinar
-</button>
-
+<div class="card-title">Canal de Vídeos em IA</div>
+<div class="card-sub">5 vídeos HD por dia</div>
+<div class="price">R$ 24/mês</div>
+<button class="btn">Quero Assinar</button>
 </a>
 
 <a class="canal-card" href="https://pay.cakto.com.br/35odqxk_743449" target="_blank">
-
 <span style="font-size:2.5rem;">🎓</span>
-
-<div class="card-title">
-Curso Completo + Suporte
-</div>
-
-<div class="card-sub">
-Shopee · +4.000 vídeos
-</div>
-
-<div class="price">
-R$ 25,90/mês
-</div>
-
-<button class="btn">
-Quero o Curso
-</button>
-
+<div class="card-title">Curso Completo + Suporte</div>
+<div class="card-sub">Shopee · +4.000 vídeos</div>
+<div class="price">R$ 25,90/mês</div>
+<button class="btn">Quero o Curso</button>
 </a>
-
 </div>
-
-<!-- APLICATIVOS -->
 
 <div class="section-label">📌 Aplicativos anuais</div>
 
@@ -406,7 +305,6 @@ Quero o Curso
 <div class="card-title">🤖 Veo3 + Gemini</div>
 <div class="card-sub">Inteligência Artificial Completa</div>
 <div class="price">R$ 97/ano</div>
-
 <a href="https://pay.kirvano.com/14458aaf-4aca-4068-af9b-ad30c10dee83?aff=3d3ead42-9455-4dfb-8645-b960ef64fb3b" target="_blank">
 <button class="btn">Comprar Agora</button>
 </a>
@@ -416,7 +314,6 @@ Quero o Curso
 <div class="card-title">🤖 Gemini</div>
 <div class="card-sub">Pix ou cartão</div>
 <div class="price">R$ 67/ano</div>
-
 <a href="https://pay.kirvano.com/be72c86c-9095-47db-be96-af2f8f80ccee?aff=26c0668a-8104-4203-948a-0c348aa97683" target="_blank">
 <button class="btn">Comprar Agora</button>
 </a>
@@ -426,7 +323,6 @@ Quero o Curso
 <div class="card-title">🤖 ChatGPT Privado</div>
 <div class="card-sub">No seu e-mail · Sem limites</div>
 <div class="price">R$ 67/ano</div>
-
 <a href="https://pay.kirvano.com/542b4124-945c-416b-9d2f-9adab6923996?aff=f3d3a3b8-95eb-467d-b2fe-4a5eb6628af8" target="_blank">
 <button class="btn">Comprar Agora</button>
 </a>
@@ -436,7 +332,6 @@ Quero o Curso
 <div class="card-title">🤖 Grok</div>
 <div class="card-sub">Imagens + vídeos</div>
 <div class="price">R$ 197/ano</div>
-
 <a href="https://pay.kirvano.com/aa69d67a-27af-4800-ae73-9b16e79831d4?aff=1cba4321-8548-45c7-815a-1ec86f99228b" target="_blank">
 <button class="btn">Comprar Agora</button>
 </a>
@@ -446,19 +341,15 @@ Quero o Curso
 <div class="card-title">🎥 CapCut</div>
 <div class="card-sub">Edição sem limites · Anual</div>
 <div class="price">R$ 47/ano</div>
-
 <a href="https://pay.kirvano.com/85283aae-88a7-4dd0-90ae-1b65d2663f33?aff=00e42f69-c99b-433d-b435-4056ad6c164b" target="_blank">
 <button class="btn">Comprar Agora</button>
 </a>
 </div>
 
-<!-- NOVO CARD -->
-
 <div class="card">
 <div class="card-title">🎁 Aula Gratuita</div>
 <div class="card-sub">Mini curso afiliado Shopee</div>
 <div class="price">100% grátis</div>
-
 <a href="#curso-gratis">
 <button class="btn">Assistir Agora</button>
 </a>
@@ -466,128 +357,123 @@ Quero o Curso
 
 </div>
 
-<!-- BONUS -->
-
 <div class="section-label">🎁 Bônus exclusivo</div>
 
 <div class="bonus-panel">
-
 <div class="bonus-grid">
-
-<div class="bonus-item">
-✔ Grupo privado no WhatsApp
+<div class="bonus-item">✔ Grupo privado no WhatsApp</div>
+<div class="bonus-item">✔ Dicas de apps, edição e IA</div>
+<div class="bonus-item">✔ Site Prompts Rozana Escobar</div>
+<div class="bonus-item">✔ +60 prompts prontos</div>
 </div>
-
-<div class="bonus-item">
-✔ Dicas de apps, edição e IA
 </div>
-
-<div class="bonus-item">
-✔ Site Prompts Rozana Escobar
-</div>
-
-<div class="bonus-item">
-✔ +60 prompts prontos
-</div>
-
-</div>
-
-</div>
-
-<!-- AVISO -->
 
 <div class="notice">
-
 📩 Após a compra, entre em contato informando o e-mail utilizado para liberar seu acesso.
-
 </div>
-
-<!-- MINI CURSO -->
 
 <div id="curso-gratis" class="curso-box">
 
-<h2 class="curso-title">
-🎓 Aula Gratuita — Afiliado Shopee
-</h2>
+<h2 class="curso-title">🎓 Aula Gratuita — Afiliado Shopee</h2>
 
 <p class="curso-desc">
-Aprenda como começar do zero e vender usando Instagram, Reels e produtos virais da Shopee.
+Curso gratuito do básico ao avançado para começar como afiliado Shopee, criar Reels, escolher produtos campeões e vender mais usando Instagram.
 </p>
 
 <div class="modulo">
-
-<h3>📌 Módulo 1 — Como funciona o afiliado Shopee</h3>
-
-<p>
-Você divulga produtos com seu link e ganha comissão por venda realizada.
-</p>
-
-<div class="exemplo">
-Exemplo: produto de R$100 com 10% de comissão = R$10 por venda.
-</div>
-
-<div class="missao">
-Missão: escolha 5 produtos úteis dentro da Shopee.
-</div>
-
+<h3>📌 Módulo 1: Entendendo a Afiliados Shopee</h3>
+<p>O afiliado Shopee é alguém que promove produtos da Shopee em seus canais, como Instagram, e ganha comissões quando alguém compra pelo seu link.</p>
+<div class="exemplo">Exemplo: você promove um liquidificador de R$100 com 10% de comissão. Cada venda rende R$10.</div>
+<div class="erro">Erro comum: divulgar produtos que parecem interessantes para você, mas que não têm desejo, utilidade ou potencial de viralizar.</div>
+<div class="missao">Exercício: escolha 3 produtos na Shopee que tenham bom apelo visual, sejam úteis e tenham preço acessível.</div>
 </div>
 
 <div class="modulo">
-
-<h3>🔥 Módulo 2 — Como encontrar produtos virais</h3>
-
-<p>
-Produtos virais resolvem problemas, geram curiosidade e são fáceis de mostrar em vídeo.
-</p>
-
-<div class="exemplo">
-Exemplos: panela elétrica, organizadores, gadgets, cozinha e beleza.
-</div>
-
-<div class="missao">
-Missão: encontre 3 produtos que rendem vídeos curtos.
-</div>
-
+<h3>🔥 Módulo 2: Escolhendo Produtos Campeões</h3>
+<p>Produtos campeões resolvem um problema, têm demonstração visual rápida e possuem preço impulsivo.</p>
+<div class="exemplo">Exemplo: um organizador de cozinha que resolve bagunça e custa R$50 pode vender muito porque mostra transformação rápida.</div>
+<div class="erro">Erro comum: escolher produtos sem demonstração forte, como roupas básicas ou itens difíceis de mostrar em vídeo.</div>
+<div class="missao">Exercício: encontre 2 produtos na Shopee que possam ser demonstrados em 10 segundos de vídeo.</div>
 </div>
 
 <div class="modulo">
-
-<h3>🎬 Módulo 3 — Como criar Reels que vendem</h3>
-
-<p>
-Use gancho forte + demonstração rápida + benefício + CTA.
-</p>
-
-<div class="exemplo">
-“Parei de perder arroz depois dessa panela elétrica.”
-</div>
-
-<div class="missao">
-Missão: grave um vídeo simples mostrando um produto funcionando.
-</div>
-
+<h3>🎬 Módulo 3: Criando Reels que Vendem</h3>
+<p>Reels eficazes têm um gancho inicial forte, uma demonstração rápida do produto, um benefício claro e um CTA.</p>
+<div class="exemplo">Exemplo: “Parei de perder tempo com essa panela elétrica!” Depois mostre a panela em ação e finalize com “Link na bio”.</div>
+<div class="erro">Erro comum: começar o vídeo devagar, explicar demais ou deixar o produto aparecer só no final.</div>
+<div class="missao">Exercício: crie um roteiro curto para um Reel de um produto, incluindo gancho, demonstração e CTA.</div>
 </div>
 
 <div class="modulo">
-
-<h3>🚀 Módulo 4 — Ganchos virais</h3>
-
-<p>
-Os primeiros segundos precisam parar o scroll.
-</p>
-
-<div class="exemplo">
-“Você ainda cozinha do jeito difícil?”
+<h3>🚀 Módulo 4: Ganchos Virais</h3>
+<p>Ganchos são as primeiras palavras que prendem a atenção. Um bom gancho gera curiosidade, dor, desejo ou urgência.</p>
+<div class="exemplo">Exemplos: “Ninguém te contou isso...” ou “Esse erro está acabando com sua cozinha”.</div>
+<div class="erro">Erro comum: começar com frases fracas como “Oi gente” ou “Hoje vou mostrar um produto”.</div>
+<div class="missao">Exercício: escreva 5 ganchos de até 10 palavras para um produto.</div>
 </div>
 
-<div class="exemplo">
-“Ninguém te conta isso…”
+<div class="modulo">
+<h3>📲 Módulo 5: Organizando seu Instagram</h3>
+<p>Um perfil vendedor precisa mostrar rapidamente o que a pessoa encontra ali. A bio deve ser clara, direta e voltada para benefício.</p>
+<div class="exemplo">Exemplo de bio: “Achadinhos da Shopee todo dia”. Use destaques como “Mais Vendidos”, “Dicas”, “Casa”, “Cozinha” e “Promoções”.</div>
+<div class="erro">Erro comum: ter uma bio confusa, sem nicho, sem promessa e sem indicar onde clicar.</div>
+<div class="missao">Exercício: ajuste sua bio e crie 3 destaques estratégicos.</div>
 </div>
 
-<div class="missao">
-Missão: escreva 10 ganchos para um único produto.
+<div class="modulo">
+<h3>📆 Módulo 6: Postando com Consistência</h3>
+<p>O segredo é volume e constância. Postar 3 Reels por dia aumenta suas chances de acertar um vídeo viral.</p>
+<div class="exemplo">Exemplo: faça 1 vídeo de cozinha, 1 de utilidade doméstica e 1 de produto curioso por dia.</div>
+<div class="erro">Erro comum: postar só quando tem inspiração e desistir depois de poucos vídeos.</div>
+<div class="missao">Exercício: planeje 3 vídeos para os próximos 3 dias.</div>
 </div>
 
+<div class="modulo">
+<h3>📊 Módulo 7: Analisando e Escalando</h3>
+<p>Analise o que deu mais visualizações, repita o formato e teste variações. Escalar é repetir o que funciona.</p>
+<div class="exemplo">Exemplo: se um vídeo com “panela elétrica” teve mais alcance, crie outros com novos ganchos sobre o mesmo produto.</div>
+<div class="erro">Erro comum: abandonar um formato que funcionou e começar sempre do zero.</div>
+<div class="missao">Exercício: revise seus vídeos anteriores e liste o que deu mais certo.</div>
+</div>
+
+<div class="modulo">
+<h3>🗓️ Módulo 8: Como Postar com Consistência</h3>
+<p>O sucesso vem da frequência. Postar 3 a 5 vezes por semana ajuda o algoritmo a entender seu conteúdo.</p>
+<div class="exemplo">Exemplo: segunda poste produto de cozinha, terça organização, quarta beleza, quinta gadget e sexta promoção.</div>
+<div class="erro">Erro comum: postar apenas quando tem inspiração em vez de criar uma rotina.</div>
+<div class="missao">Exercício: crie um calendário de conteúdo planejando 5 posts para a próxima semana.</div>
+</div>
+
+<div class="modulo">
+<h3>📈 Módulo 9: Analisando Métricas</h3>
+<p>As métricas essenciais são visualizações, retenção, compartilhamentos, comentários e cliques no link.</p>
+<div class="exemplo">Exemplo: se um vídeo retém 70% das pessoas até o final, você está no caminho certo.</div>
+<div class="erro">Erro comum: não olhar as métricas. Sem análise, você repete erros e não entende o que vende.</div>
+<div class="missao">Exercício: revise seus últimos 5 vídeos e anote qual teve melhor retenção.</div>
+</div>
+
+<div class="modulo">
+<h3>💰 Módulo 10: Escalando suas Vendas</h3>
+<p>Escalar significa repetir o que deu certo, mas com variações. Se um vídeo viralizou, faça novas versões com outros ganchos.</p>
+<div class="exemplo">Exemplo: vídeo original “Parei de perder arroz depois disso”. Variações: “Meu arroz nunca mais queimou” e “Essa panela faz tudo sozinha”.</div>
+<div class="erro">Erro comum: abandonar um vídeo vencedor em vez de transformar ele em várias versões.</div>
+<div class="missao">Exercício: pegue um vídeo que performou bem e crie 3 variações para a próxima semana.</div>
+</div>
+
+<div class="modulo">
+<h3>🌱 Módulo 11: Criando uma Estratégia de Longo Prazo</h3>
+<p>Pense além das vendas rápidas. Construa uma audiência fiel com conteúdo útil, dicas constantes e produtos que realmente ajudam.</p>
+<div class="exemplo">Exemplo: crie quadros fixos como “Achadinho da semana”, “Produto que facilita sua vida” e “Testei e aprovei”.</div>
+<div class="erro">Erro comum: só postar oferta e nunca criar confiança com o público.</div>
+<div class="missao">Exercício: defina 3 temas de conteúdo que você pode postar mensalmente para nutrir sua audiência.</div>
+</div>
+
+<div class="modulo">
+<h3>🔥 Módulo 12: Adaptando-se às Tendências</h3>
+<p>O marketing de afiliados está sempre mudando. Fique atenta a novas ferramentas, formatos de vídeo e produtos em alta.</p>
+<div class="exemplo">Exemplo: se um produto viraliza no TikTok ou Reels, adapte o formato para seu perfil e crie sua própria versão.</div>
+<div class="erro">Erro comum: copiar tendências tarde demais ou não adaptar para o seu público.</div>
+<div class="missao">Exercício: pesquise uma nova tendência, como um tipo de vídeo ou produto viral, e pense em como adaptar para sua estratégia.</div>
 </div>
 
 </div>
